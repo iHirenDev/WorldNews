@@ -44,8 +44,8 @@ class _WorldNewsState extends State<WorldNews> {
         selectedItemColor: Colors.white,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.trending_up),
-            title: Text("Trending"),
+            icon: Icon(Entypo.news),
+            title: Text("News"),
             backgroundColor: Colors.deepPurple
             ),
           
@@ -58,7 +58,7 @@ class _WorldNewsState extends State<WorldNews> {
 
           BottomNavigationBarItem(
             icon: Icon(AntDesign.earth),
-            title: Text("World"),
+            title: Text("Countries"),
             backgroundColor: Colors.deepPurple
             ),
           

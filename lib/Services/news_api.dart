@@ -3,8 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:worldnews/Models/news_model.dart';
 
 class NewsAPI{
- final apiKey = '5e50c7dec93348abac5282a10bc8ff40'; 
- //final url = 'https://newsapi.org/v2/top-headlines?country=au&apiKey=5e50c7dec93348abac5282a10bc8ff40';
+ final apiKey = 'YOUR API KEY'; 
 
 
  Future<List<Article>> fetchTopNewsFor(String country,String category) async{
@@ -17,7 +16,6 @@ class NewsAPI{
     final json = jsonDecode(response.body);
     
     final news = NewsModel.fromJson(json);
-   // print(news.articles[0].title);
     return news.articles;
   }else{
     throw Exception('Failed to fetch information');
@@ -33,7 +31,6 @@ class NewsAPI{
     final json = jsonDecode(response.body);
     
     final news = NewsModel.fromJson(json);
-   // print(news.articles[0].title);
     return news.articles;
   }else{
     throw Exception('Failed to fetch information');

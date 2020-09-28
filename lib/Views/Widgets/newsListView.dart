@@ -55,9 +55,12 @@ class NewsListView extends StatelessWidget {
                           title: Text(title),
                           subtitle: Text(_.news[index].source.name),
                           onTap: () {
+                            print(_.news[index].url);
                             Get.to(NewsDetails(
+
                               newsURL: _.news[index].url,
-                            ));
+                            ),
+                            transition: Transition.native);
                           },
                         ),
                         SizedBox(height: 10)

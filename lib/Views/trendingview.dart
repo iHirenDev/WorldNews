@@ -28,7 +28,7 @@ class TrendingView extends StatelessWidget {
             //labelColor: Colors.deepPurple,
             tabs: [
               Tab(
-                text: "All",
+                text: "Trending",
                 icon: Icon(Icons.trending_up),
               ),
               Tab(

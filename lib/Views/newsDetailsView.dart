@@ -12,10 +12,13 @@ class NewsDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title:Text('DetailsView')
+          title:Text('DetailsView'),
+          backgroundColor: Colors.deepPurple,
         ),
+        
         body: WebView(
           initialUrl: this.newsURL,
+          javascriptMode: JavascriptMode.unrestricted,
         ),
     );
   }
