@@ -3,8 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:worldnews/Models/news_model.dart';
 
 class NewsAPI{
- final apiKey = 'YOUR API KEY'; 
-
+ final apiKey = '5e50c7dec93348abac5282a10bc8ff40'; 
 
  Future<List<Article>> fetchTopNewsFor(String country,String category) async{
 

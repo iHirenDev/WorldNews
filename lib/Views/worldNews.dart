@@ -5,6 +5,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';
 import 'package:worldnews/Controllers/headlinesController.dart';
 
+import 'archivedView.dart';
 import 'countriesView.dart';
 import 'searchView.dart';
 import 'trendingview.dart';
@@ -25,7 +26,7 @@ class _WorldNewsState extends State<WorldNews> {
     Center(child:TrendingView()),
     Center(child:SearchView()),
     Center(child:Countries()),
-   // Center(child:TestView())
+    Center(child: ArchivedView(),)
     ];
 
   @override
@@ -62,11 +63,11 @@ class _WorldNewsState extends State<WorldNews> {
             backgroundColor: Colors.deepPurple
             ),
           
-          // BottomNavigationBarItem(
-          //   icon: Icon(AntDesign.book),
-          //   title: Text("Reading"),
-          //   backgroundColor: Colors.deepPurple
-          //   ),
+          BottomNavigationBarItem(
+            icon: Icon(AntDesign.book),
+            title: Text("Reading"),
+            backgroundColor: Colors.deepPurple
+            ),
         ],
         onTap: (index) => changeTabs(index),
         ),

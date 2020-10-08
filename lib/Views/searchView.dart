@@ -90,7 +90,11 @@ class _SearchViewState extends State<SearchView> {
 
                     return Column(
                       children: <Widget>[
-                        Image.network(_.news[index].urlToImage),
+                        Container(
+                          child: FadeInImage.assetNetwork(
+                            placeholder: 'assets/images/news.jpg', 
+                            image: _.news[index].urlToImage),
+                        ),
                         ListTile(
                           title: Text(title),
                           subtitle: Text(_.news[index].source.name),

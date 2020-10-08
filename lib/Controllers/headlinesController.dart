@@ -1,10 +1,12 @@
 import 'package:get/state_manager.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:worldnews/Models/news_model.dart';
 import '../Services/news_api.dart';
 
 
 class HeadlinesController extends GetxController {
-  var newsList = List<Article>().obs;
+  GetStorage box = GetStorage();
+  var readingList = List<Article>().obs;
   List<Article> news = List<Article>();
 
   var country = 'in'.obs;
@@ -17,14 +19,9 @@ class HeadlinesController extends GetxController {
     update();
   }
 
-  int changeTabs(int index){
-      return index;
-  }
-
-  getNews() async{
-    NewsAPI().fetchTopNewsFor(country.value,category.value).then((value) {
-      this.newsList.value = value;
-    });
+  addToReadingList(Article article){
+    this.readingList.add(article);   
+    box.write('readingList', this.readingList);                 
   }
 
   @override

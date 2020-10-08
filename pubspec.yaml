@@ -33,6 +33,7 @@ dependencies:
   provider: ^4.3.2+1
   get: 
   webview_flutter: ^0.3.22+1
+  get_storage:
 
 
 

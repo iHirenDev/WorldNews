@@ -6,7 +6,7 @@ import 'worldNews.dart';
 
 class Countries extends StatelessWidget {
 
-  final HeadlinesController controller = Get.put(HeadlinesController());
+  //final HeadlinesController controller = Get.put(HeadlinesController());
   final WorldNews worldNews = WorldNews();
 
   @override
@@ -38,7 +38,7 @@ class Countries extends StatelessWidget {
             
             onTap: (){
               var msg = listCountryCodes[index];
-              controller.country.value = msg;
+              Get.find<HeadlinesController>().country.value = msg;
               Get.off(WorldNews(),
                       transition: Transition.noTransition);
               /*

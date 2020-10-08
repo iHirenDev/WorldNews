@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:worldnews/Controllers/headlinesController.dart';
 import 'package:worldnews/Views/Widgets/newsListView.dart';
 
 class TrendingView extends StatelessWidget {
@@ -80,7 +78,7 @@ class TrendingView extends StatelessWidget {
     );
   }
 
-  _showBottomSheet() {
+ /* _showBottomSheet() {
     Get.bottomSheet(
       Container(
         child: Wrap(
@@ -110,5 +108,5 @@ class TrendingView extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
     );
-  }
+  }*/
 }
